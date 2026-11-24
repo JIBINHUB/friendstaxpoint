@@ -663,7 +663,3 @@ a.citem:hover { transform: translateX(6px); border-color: #cfe2fd; box-shadow: v
 
 /* WebP <picture> wrappers should not affect layout */
 picture { display: contents; }
-
-/* Logo wordmark: Poppins Regular */
-.logo span { font-family: "Poppins", sans-serif; font-weight: 400; letter-spacing: .4px; }
-.logo b { font-weight: 400; }
