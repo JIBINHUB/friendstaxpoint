@@ -111,13 +111,23 @@ document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
   calc();
 })();
 
-// Contact form -> opens the visitor's email app with the enquiry filled in
+// Contact form -> opens WhatsApp chat with the enquiry pre-filled
+const WHATSAPP_NUMBER = '917012969190'; // Friends Tax Point (+91 70129 69190)
 document.getElementById('contactForm').addEventListener('submit', e => {
   e.preventDefault();
   const f = new FormData(e.target);
-  const subject = `Enquiry: ${f.get('service')} — ${f.get('name')}`;
-  const body = `Name: ${f.get('name')}\nPhone: ${f.get('phone')}\nService: ${f.get('service')}\n\n${f.get('message')}`;
-  location.href = `mailto:lijunellickal@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const lines = [
+    'Hello Friends Tax Point, I would like to enquire about your services.',
+    '',
+    `*Name:* ${f.get('name')}`,
+    `*Phone:* ${f.get('phone')}`,
+    `*Service:* ${f.get('service')}`,
+  ];
+  const msg = (f.get('message') || '').trim();
+  if (msg) lines.push(`*Message:* ${msg}`);
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+  const win = window.open(url, '_blank', 'noopener');
+  if (!win) location.href = url; // popup blocked -> open in same tab
 });
 
 // Branch network: pins + tabs drive the card and live map
