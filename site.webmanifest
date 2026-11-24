@@ -1,0 +1,13 @@
+{
+  "name": "Friends Tax Point",
+  "short_name": "FriendsTax",
+  "description": "Tax & business consultants in Kerala since 2001",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1678fb",
+  "icons": [
+    { "src": "images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
