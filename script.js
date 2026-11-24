@@ -17,7 +17,7 @@ onScroll();
 // Mobile menu
 const nav = document.getElementById('nav');
 const burger = document.getElementById('burger');
-burger.addEventListener('click', () => { nav.classList.toggle('open'); burger.classList.toggle('open'); });
+burger.addEventListener('click', () => { const o = nav.classList.toggle('open'); burger.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); });
 nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); burger.classList.remove('open'); }));
 
 // Scroll reveal with stagger (ClearTax-style slide up)
