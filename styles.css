@@ -725,3 +725,47 @@ picture { display: contents; }
   .nav { top: 58px; }
   html { scroll-padding-top: 66px; }
 }
+
+/* ---------- Polish fixes ---------- */
+/* footer logo: icon beside text (footer links are display:block) */
+.footer .logo { display: flex; }
+
+@media (max-width: 640px) {
+  /* footer: compact two-column layout */
+  .footer { padding: 48px 0 100px; }
+  .footer__grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .footer__grid > div:first-child { grid-column: 1 / -1; }
+  .footer h4 { margin-bottom: 10px; }
+  .footer a { margin-bottom: 6px; font-size: 13.5px; }
+  .footer__bottom { flex-direction: column; gap: 6px; margin-top: 28px; }
+
+  /* hero floating cards: smaller so they don't cover the model */
+  .chip { padding: 7px 10px; gap: 7px; border-radius: 10px; }
+  .chip svg { width: 22px; height: 22px; }
+  .chip b { font-size: 12px; }
+  .chip small { font-size: 10px; }
+  .chip--a { left: 0; bottom: 14%; top: auto; }
+  .chip--b { right: 0; top: 10%; }
+  .chip--b b { font-size: 15px; }
+
+  /* "why choose" slider: smaller stat card, tucked to the bottom-left */
+  .mock { width: 132px; padding: 10px; bottom: 6px; border-radius: 12px; }
+  .mock__big { font-size: 22px; }
+  .mock small { font-size: 10px; margin-bottom: 6px; }
+  .mock__row { font-size: 10.5px; padding: 5px 0; }
+  .pslide__media img { width: 74%; right: 0; }
+
+  /* tighter cards so the page isn't overly long */
+  .pastel-grid { gap: 12px; }
+  .pcard { padding: 20px 20px 18px; }
+  .pcard__top { margin-bottom: 14px; }
+  .pcard__icon { width: 46px; height: 46px; border-radius: 13px; }
+  .pcard__icon svg { width: 28px; height: 28px; }
+  .pcard h3 { font-size: 19px; }
+  .pcard__cta { margin-top: 14px; padding-top: 12px; }
+  .feat-grid { gap: 14px; }
+  .fcard { padding: 18px 16px 22px; }
+  .fcard__ui { height: 170px; margin-bottom: 14px; }
+  .fcard h3 { font-size: 17px; }
+  .title { margin-bottom: 32px; }
+}
