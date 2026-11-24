@@ -62,7 +62,7 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 .header { position: sticky; top: 0; z-index: 60; background: rgba(255, 255, 255, .92); backdrop-filter: saturate(180%) blur(14px); transition: box-shadow .3s; }
 .header.scrolled { box-shadow: 0 1px 0 var(--line), 0 8px 24px -16px rgba(16, 24, 40, .2); }
 .header__inner { height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.logo { display: flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 500; letter-spacing: .6px; text-transform: uppercase; }
+.logo { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 500; letter-spacing: -.3px; }
 .logo img { height: 34px; width: auto; }
 .logo b { font-weight: 700; color: var(--blue); }
 .nav { display: flex; gap: 36px; font-size: 14px; font-weight: 500; }
