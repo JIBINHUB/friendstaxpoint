@@ -132,6 +132,7 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 @keyframes spin { to { transform: rotate(360deg); } }
 .hero__person {
   position: relative; z-index: 1; width: min(470px, 94%); height: auto; margin-top: 0;
+  transform: translateX(8%); /* face sits at ~42% of the photo; shift so it lines up with the ring centre */
   filter: drop-shadow(0 1px 1px rgba(16, 24, 40, .12)) drop-shadow(18px 26px 30px rgba(22, 60, 120, .24));
 
 }
