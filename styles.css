@@ -769,3 +769,36 @@ picture { display: contents; }
   .fcard h3 { font-size: 17px; }
   .title { margin-bottom: 32px; }
 }
+
+/* ---------- Mobile: cards two per row ---------- */
+@media (max-width: 640px) {
+  /* hero action cards */
+  .hero__cards { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hcard { padding: 14px 12px 12px; border-radius: 14px; }
+  .hcard__icon svg { width: 38px; height: 38px; }
+  .hcard h3 { font-size: 16px; margin-top: 8px; }
+  .hcard p { font-size: 12.5px; margin: 2px 0 12px; }
+  .hcard .btn { height: 38px; font-size: 13px; padding: 0 8px; }
+
+  /* "Tax Partner For" cards */
+  .pastel-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .pcard { padding: 14px 12px 12px; border-radius: 16px; }
+  .pcard__top { margin-bottom: 10px; }
+  .pcard__num { font-size: 10px; letter-spacing: 1px; }
+  .pcard__icon { width: 36px; height: 36px; border-radius: 10px; }
+  .pcard__icon svg { width: 22px; height: 22px; }
+  .pcard h3 { font-size: 15px; line-height: 1.25; letter-spacing: -.2px; }
+  .pcard p { font-size: 12px; line-height: 1.5; margin-top: 6px; }
+  .pcard__cta { margin-top: 10px; padding-top: 10px; font-size: 12.5px; }
+
+  /* "Need more help?" bento: small cards side by side */
+  .bento { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .bcard--tall, .bcard--wide { grid-column: 1 / -1; }
+  .bcard:not(.bcard--tall):not(.bcard--wide) { padding: 14px 10px 16px; border-radius: 18px; }
+  .bcard:not(.bcard--tall):not(.bcard--wide) h3 { font-size: 15px; }
+  .bcard:not(.bcard--tall):not(.bcard--wide) p { font-size: 12px; }
+  .bcard:not(.bcard--tall):not(.bcard--wide) .mini-ui,
+  .bcard:not(.bcard--tall):not(.bcard--wide) .chat { width: 100%; padding: 8px; margin-bottom: 12px; }
+  .mini-ui__row { font-size: 11px; padding: 6px 2px; }
+  .bubble { font-size: 11px; padding: 6px 9px; max-width: 92%; }
+}
