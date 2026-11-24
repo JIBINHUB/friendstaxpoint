@@ -158,3 +158,12 @@ document.getElementById('contactForm').addEventListener('submit', e => {
   });
   tabs.forEach(t => t.addEventListener('click', () => select(+t.dataset.i, true)));
 })();
+
+// Premium cards: soft spotlight follows the cursor
+document.querySelectorAll('.pcard').forEach(card => {
+  card.addEventListener('pointermove', e => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+    card.style.setProperty('--my', `${e.clientY - r.top}px`);
+  });
+});
