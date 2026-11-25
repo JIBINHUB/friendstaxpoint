@@ -802,3 +802,29 @@ picture { display: contents; }
   .mini-ui__row { font-size: 11px; padding: 6px 2px; }
   .bubble { font-size: 11px; padding: 6px 9px; max-width: 92%; }
 }
+
+/* Mobile: rating badge spans the full width so it masks the hero cut-out's bottom edge */
+@media (max-width: 1024px) {
+  .hero__left { position: relative; z-index: 3; }
+  .rating { display: flex; width: 100%; justify-content: center; gap: 12px; margin-top: -10px; height: 38px; }
+  .rating .sep { flex-shrink: 0; }
+}
+
+/* ---------- Header logo: small icon in a coin-flipping circle ---------- */
+.header .logo img {
+  width: 36px; height: 36px; padding: 8px; box-sizing: border-box; object-fit: contain;
+  border-radius: 50%; background: linear-gradient(145deg, #eaf3ff, #ffffff); border: 1px solid #dbeafe;
+  box-shadow: 0 2px 6px rgba(22, 120, 251, .14);
+  transform-style: preserve-3d; backface-visibility: visible;
+  animation: coinFlip 5s cubic-bezier(.45, .05, .25, 1) infinite;
+}
+@keyframes coinFlip {
+  0%, 62%  { transform: perspective(420px) rotateY(0deg); }
+  82%      { transform: perspective(420px) rotateY(180deg); }
+  100%     { transform: perspective(420px) rotateY(360deg); }
+}
+.header .logo:hover img { animation-play-state: paused; transform: perspective(420px) rotateY(0deg) scale(1.08); transition: transform .4s var(--ease); }
+@media (max-width: 640px) {
+  .header .logo img { width: 32px; height: 32px; padding: 7px; }
+}
+@media (prefers-reduced-motion: reduce) { .header .logo img { animation: none; } }
