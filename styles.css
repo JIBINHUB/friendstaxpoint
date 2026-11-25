@@ -137,8 +137,10 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 
 }
 .chip {
-  position: absolute; z-index: 3; display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: #fff;
-  border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 16px 40px -14px rgba(16, 24, 40, .25); font-size: 14px;
+  position: absolute; z-index: 3; display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+  background: linear-gradient(135deg, #ffffff 0%, #f2f8ff 55%, #e6f1ff 100%);
+  border: 1px solid #dbeafe; border-radius: 12px;
+  box-shadow: 0 16px 40px -14px rgba(22, 80, 160, .22), inset 0 1px 0 #fff; font-size: 14px;
   animation: float 6s ease-in-out infinite;
 }
 .chip b { display: block; font-weight: 600; }
