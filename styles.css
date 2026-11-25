@@ -137,10 +137,16 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 
 }
 .chip {
-  position: absolute; z-index: 3; display: flex; align-items: center; gap: 10px; padding: 10px 14px;
-  background: linear-gradient(135deg, #ffffff 0%, #f2f8ff 55%, #e6f1ff 100%);
-  border: 1px solid #dbeafe; border-radius: 12px;
-  box-shadow: 0 16px 40px -14px rgba(22, 80, 160, .22), inset 0 1px 0 #fff; font-size: 14px;
+  position: absolute; z-index: 3; display: flex; align-items: center; gap: 11px; padding: 11px 20px 11px 14px;
+  border-radius: 999px; font-size: 14px; isolation: isolate;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .86) 0%, rgba(240, 247, 255, .66) 52%, rgba(225, 238, 255, .74) 100%);
+  -webkit-backdrop-filter: blur(18px) saturate(185%); backdrop-filter: blur(18px) saturate(185%);
+  border: 1px solid rgba(255, 255, 255, .85);
+  box-shadow:
+    0 14px 34px -12px rgba(22, 70, 140, .3),
+    0 3px 8px -3px rgba(22, 70, 140, .16),
+    inset 0 1px 1px rgba(255, 255, 255, 1),
+    inset 0 -1px 3px rgba(22, 70, 140, .07);
   animation: float 6s ease-in-out infinite;
 }
 .chip b { display: block; font-weight: 600; }
@@ -211,6 +217,13 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 .ai-bars .b { transform-box: fill-box; transform-origin: bottom; animation: grow 2.8s var(--ease) infinite; }
 .ai-bars .b2 { animation-delay: .2s; } .ai-bars .b3 { animation-delay: .4s; }
 @keyframes grow { 0% { transform: scaleY(.2); } 40%, 80% { transform: scaleY(1); } 100% { transform: scaleY(.2); } }
+/* agriculture: leaf sways, latex drop swells */
+.ai-eco .sway { transform-origin: 14px 36px; animation: sway 3.4s ease-in-out infinite; }
+.ai-eco .latex { transform-box: fill-box; transform-origin: 50% 0; animation: swell 3s ease-in-out infinite; }
+@keyframes swell {
+  0%, 100% { transform: scale(.72); opacity: .8; }
+  45% { transform: scale(1); opacity: 1; }
+}
 /* leaf sway */
 .ai-leaf .sway { transform-origin: 24px 42px; animation: sway 3.2s ease-in-out infinite; }
 @keyframes sway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
@@ -932,7 +945,7 @@ picture { display: contents; }
 
 /* ---------- Header logo: small icon in a coin-flipping circle ---------- */
 .header .logo img {
-  width: 36px; height: 36px; padding: 8px; box-sizing: border-box; object-fit: contain;
+  width: 36px; height: 36px; padding: 6px; box-sizing: border-box; object-fit: contain;
   border-radius: 50%; background: linear-gradient(145deg, #eaf3ff, #ffffff); border: 1px solid #dbeafe;
   box-shadow: 0 2px 6px rgba(22, 120, 251, .14);
   transform-style: preserve-3d; backface-visibility: visible;
@@ -1028,6 +1041,7 @@ picture { display: contents; }
 .svc-hero h1 { font-size: clamp(28px, 3.6vw, 44px); line-height: 1.12; letter-spacing: -1px; margin-bottom: 14px; }
 .svc-hero .lead { font-size: 18px; line-height: 1.65; max-width: 620px; margin-bottom: 26px; }
 .svc-hero__cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.svc-hero__cta .btn { white-space: nowrap; padding: 0 20px; }
 .svc-hero__note { margin-top: 18px; font-size: 13.5px; color: var(--grey); }
 .svc-hero__icon { width: 132px; height: 132px; border-radius: 50%; display: grid; place-items: center; background: var(--c-ic); flex-shrink: 0; }
 .svc-hero__icon svg { width: 68px; height: 68px; stroke: none; overflow: visible; }
@@ -1071,7 +1085,9 @@ picture { display: contents; }
 @media (max-width: 640px) {
   .svc-hero { padding: 24px 0 40px; }
   .svc-hero .lead { font-size: 16px; }
-  .svc-hero__cta .btn { flex: 1; min-width: 150px; }
+  .svc-hero__cta .btn { flex: 1; min-width: 0; font-size: 13.5px; padding: 0 12px; }
+  .svc-hero__cta .btn--wa { gap: 8px; }
+  .svc-hero__cta .btn--wa .wa-ico { width: 18px; height: 18px; }
   .inc-grid b { font-size: 15px; }
   .rel-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .rel-card { min-height: 112px; padding: 14px; }
@@ -1183,18 +1199,52 @@ picture { display: contents; }
 @media (max-width: 640px) { .kmap__credit { font-size: 10px; } }
 
 /* ---------- Footer credit: Leaf Creationism ---------- */
-.credit {
-  display: inline-flex; align-items: center; justify-content: center; gap: 9px; flex-wrap: wrap;
-  margin: 20px auto 0; padding: 0; width: fit-content; max-width: 100%;
+a.credit {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: flex; align-items: center; justify-content: center; gap: 12px; white-space: nowrap;
+  margin: 24px auto 0; padding: 5px 5px 5px 18px; width: fit-content; max-width: 100%;
+  border-radius: 13px; text-decoration: none;
+  background: linear-gradient(104deg, #0e4ea2 0%, #1678fb 55%, #3f90fd 100%);
+  box-shadow:
+    0 16px 34px -18px rgba(22, 120, 251, .95),
+    inset 0 0 0 1px rgba(255, 255, 255, .17),
+    inset 0 1px 0 rgba(255, 255, 255, .32);
+  transition: transform .3s var(--ease), box-shadow .3s;
 }
-.credit__shine { display: none; }
-.credit__label { font-size: 13px; color: #8d99a8; }
-.credit__brand { display: inline-flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 600; color: var(--blue); transition: color .25s; }
-.credit:hover .credit__brand { color: #6bb5ff; }
-.credit__leaf { width: 18px; height: 18px; flex-shrink: 0; border-radius: 50%; display: block; }
-.credit__go { font-style: normal; color: var(--blue); font-size: 14px; transition: transform .3s var(--ease); }
-.credit:hover .credit__go { transform: translateX(3px); }
-@media (max-width: 640px) { .credit { gap: 6px; margin-top: 16px; } .credit__label { font-size: 12px; } .credit__brand { font-size: 13.5px; } }
+a.credit:hover { transform: translateY(-2px); box-shadow: 0 22px 40px -18px rgba(22, 120, 251, 1), inset 0 0 0 1px rgba(255, 255, 255, .28), inset 0 1px 0 rgba(255, 255, 255, .4); }
+.credit__shine {
+  display: block; position: absolute; top: 0; left: -70px; width: 46px; height: 100%; z-index: -1; pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .5), transparent); transform: skewX(-20deg);
+  animation: streak 4s ease-in-out infinite;
+}
+.credit__label {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 10px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: rgba(255, 255, 255, .72);
+}
+.credit__label::after { content: ""; width: 1px; height: 17px; border-radius: 1px; background: rgba(255, 255, 255, .3); }
+.credit__brand { display: inline-flex; align-items: center; gap: 9px; font-size: 14.5px; font-weight: 700; letter-spacing: -.2px; color: #fff; }
+.credit__leaf {
+  width: 26px; height: 26px; flex-shrink: 0; box-sizing: border-box; padding: 3px; border-radius: 50%;
+  background: #fff; box-shadow: 0 2px 8px -2px rgba(4, 28, 62, .5); display: block; object-fit: contain;
+}
+.credit__go {
+  display: grid; place-items: center; width: 28px; height: 28px; flex-shrink: 0; margin-left: 2px;
+  border-radius: 9px; background: rgba(255, 255, 255, .16); color: #fff; font-style: normal; font-size: 13px; line-height: 1;
+  transition: background .3s, transform .3s var(--ease);
+}
+.credit:hover .credit__go { background: rgba(255, 255, 255, .3); transform: translateX(3px); }
+@media (max-width: 640px) {
+  a.credit { gap: 9px; padding: 4px 4px 4px 12px; border-radius: 12px; margin-top: 20px; }
+  .credit__label { font-size: 8.5px; letter-spacing: .09em; gap: 9px; }
+  .credit__label::after { height: 14px; }
+  .credit__brand { font-size: 12.5px; gap: 6px; }
+  .credit__leaf { width: 22px; height: 22px; padding: 2.5px; }
+  .credit__go { width: 24px; height: 24px; border-radius: 8px; font-size: 11.5px; margin-left: 0; }
+}
+@media (max-width: 374px) {
+  .credit__label { font-size: 8px; letter-spacing: .04em; }
+  .credit__brand { font-size: 12px; }
+}
 
 /* ---------- "Why choose" slides: larger on desktop ---------- */
 @media (min-width: 1025px) {
@@ -1208,4 +1258,23 @@ picture { display: contents; }
   .mock__row { font-size: 14px; padding: 10px 0; }
   .pslide__text h3 { font-size: clamp(28px, 3vw, 38px); margin-bottom: 18px; }
   .pslide__text p { font-size: 19px; }
+}
+
+/* ---------- Hero chips: glass capsule ---------- */
+.chip::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1; pointer-events: none;
+  background: linear-gradient(152deg, rgba(255, 255, 255, .72) 0%, rgba(255, 255, 255, .12) 42%, rgba(255, 255, 255, 0) 70%);
+}
+.chip::after {
+  content: ""; position: absolute; left: 14%; right: 14%; top: 1px; height: 1px; border-radius: 999px; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 1), transparent);
+}
+.chip svg { width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
+  box-shadow: 0 2px 6px -2px rgba(22, 70, 140, .28), inset 0 0 0 1px rgba(255, 255, 255, .9); }
+.chip b { letter-spacing: -.1px; }
+.chip--b { padding: 11px 22px; }
+.chip--b b { letter-spacing: -.3px; }
+@media (max-width: 640px) {
+  .chip { padding: 8px 16px 8px 11px; gap: 8px; }
+  .chip--b { padding: 8px 16px; }
 }
