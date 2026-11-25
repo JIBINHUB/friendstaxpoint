@@ -571,9 +571,14 @@ a.citem:hover { transform: translateX(6px); border-color: #cfe2fd; box-shadow: v
   border: 1px solid var(--line); box-shadow: 0 24px 48px -32px rgba(16, 40, 80, .28);
 }
 .kmap { width: 100%; max-width: 440px; height: auto; display: block; overflow: visible; stroke: none; }
-.kmap__grid { opacity: 0; transition: opacity 1.2s ease .2s; }
-.kmap__glow { opacity: 0; transition: opacity 1.4s ease; }
-.net__map.in .kmap__grid, .net__map.in .kmap__glow { opacity: 1; }
+.kmap__sea, .kmap__land { opacity: 0; transition: opacity 1s ease; }
+.net__map.in .kmap__sea, .net__map.in .kmap__land { opacity: 1; }
+.kmap__coast { fill: none; stroke: #9fc8ef; stroke-width: 1.6; stroke-linejoin: round;
+  stroke-dasharray: 4700; stroke-dashoffset: 4700; }
+.net__map.in .kmap__coast { animation: coastDraw 2.4s var(--ease) .1s forwards; }
+@keyframes coastDraw { to { stroke-dashoffset: 0; } }
+.kmap__sealabel { fill: #8fb6dd; stroke: none; font: 700 11px "Plus Jakarta Sans", sans-serif; letter-spacing: 5px; }
+.kmap__region { fill: rgba(22, 120, 251, .1); stroke: none; font: 800 30px "Plus Jakarta Sans", sans-serif; letter-spacing: 4px; text-anchor: end; }
 
 /* route: a soft base line that draws itself, with a travelling pulse on top */
 .kmap__route { fill: none; stroke: #d7e4f5; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
@@ -641,7 +646,7 @@ a.citem:hover { transform: translateX(6px); border-color: #cfe2fd; box-shadow: v
 .net__loader.on { opacity: 1; }
 .net__loader span { width: 28px; height: 28px; border-radius: 50%; border: 2.5px solid #dbe5f3; border-top-color: var(--blue); animation: spin .8s linear infinite; }
 .net__actions { display: flex; gap: 10px; flex-wrap: wrap; }
-.net__actions .btn { flex: 1; min-width: 170px; height: 44px; }
+.net__actions .btn { flex: 1 1 auto; min-width: 0; height: 44px; white-space: nowrap; padding: 0 16px; }
 .net__ghost { color: var(--blue); background: #fff; border-color: #cfe0f7; }
 .net__ghost:hover { background: var(--sky); }
 
@@ -688,6 +693,14 @@ a.citem:hover { transform: translateX(6px); border-color: #cfe2fd; box-shadow: v
 
 .net__map { position: relative; display: grid; place-items: center; padding: 16px; border-radius: 24px; background: #fff; border: 1px solid var(--line); }
 .kmap { width: 100%; max-width: 440px; height: auto; display: block; overflow: visible; stroke: none; }
+.kmap__sea, .kmap__land { opacity: 0; transition: opacity 1s ease; }
+.net__map.in .kmap__sea, .net__map.in .kmap__land { opacity: 1; }
+.kmap__coast { fill: none; stroke: #9fc8ef; stroke-width: 1.6; stroke-linejoin: round;
+  stroke-dasharray: 4700; stroke-dashoffset: 4700; }
+.net__map.in .kmap__coast { animation: coastDraw 2.4s var(--ease) .1s forwards; }
+@keyframes coastDraw { to { stroke-dashoffset: 0; } }
+.kmap__sealabel { fill: #8fb6dd; stroke: none; font: 700 11px "Plus Jakarta Sans", sans-serif; letter-spacing: 5px; }
+.kmap__region { fill: rgba(22, 120, 251, .1); stroke: none; font: 800 30px "Plus Jakarta Sans", sans-serif; letter-spacing: 4px; text-anchor: end; }
 .kmap__route { fill: none; stroke: #dbe5f3; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .kmap__route--flow { stroke: var(--blue); stroke-width: 1.6; stroke-dasharray: 2 10; animation: flow 2.4s linear infinite; opacity: .7; }
 @keyframes flow { to { stroke-dashoffset: -48; } }
@@ -720,7 +733,7 @@ a.citem:hover { transform: translateX(6px); border-color: #cfe2fd; box-shadow: v
 .net__loader.on { opacity: 1; }
 .net__loader span { width: 28px; height: 28px; border-radius: 50%; border: 2.5px solid #dbe5f3; border-top-color: var(--blue); animation: spin .8s linear infinite; }
 .net__actions { display: flex; gap: 10px; flex-wrap: wrap; }
-.net__actions .btn { flex: 1; min-width: 170px; height: 44px; }
+.net__actions .btn { flex: 1 1 auto; min-width: 0; height: 44px; white-space: nowrap; padding: 0 16px; }
 .net__ghost { color: var(--blue); background: #fff; border-color: #cfe0f7; }
 .net__ghost:hover { background: var(--sky); }
 
@@ -1165,3 +1178,6 @@ picture { display: contents; }
   .spin-badge::after { inset: 36px; }
   .spin-badge text { font-size: 13.5px; letter-spacing: 2.8px; }
 }
+
+.kmap__credit { margin-top: 6px; font-size: 10.5px; color: #9bb0c9; text-align: center; }
+@media (max-width: 640px) { .kmap__credit { font-size: 10px; } }
