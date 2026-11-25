@@ -137,8 +137,8 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 
 }
 .chip {
-  position: absolute; z-index: 3; display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: rgba(255, 255, 255, .92);
-  backdrop-filter: blur(8px); border-radius: 12px; box-shadow: 0 16px 40px -14px rgba(16, 24, 40, .25); font-size: 14px;
+  position: absolute; z-index: 3; display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: #fff;
+  border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 16px 40px -14px rgba(16, 24, 40, .25); font-size: 14px;
   animation: float 6s ease-in-out infinite;
 }
 .chip b { display: block; font-weight: 600; }
@@ -714,11 +714,11 @@ picture { display: contents; }
   .logo img { height: 26px; }
   .header__cta { gap: 8px; }
   .hcall, .burger { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; }
-  .hcall { color: var(--blue); background: var(--sky); }
+  .hcall { color: #fff; background: var(--blue); box-shadow: 0 6px 14px -6px rgba(22, 120, 251, .7); }
   .hcall svg { width: 17px; height: 17px; }
-  .burger { background: var(--soft); border: 1px solid var(--line); padding: 0; }
+  .burger { background: var(--blue); border: 0; padding: 0; box-shadow: 0 6px 14px -6px rgba(22, 120, 251, .7); }
   .burger { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px; }
-  .burger span, .burger span:nth-child(3) { display: block; width: 16px; height: 2px; margin: 0; border-radius: 2px; background: var(--ink); transition: transform .3s var(--ease), opacity .2s; }
+  .burger span, .burger span:nth-child(3) { display: block; width: 16px; height: 2px; margin: 0; border-radius: 2px; background: #fff; transition: transform .3s var(--ease), opacity .2s; }
   .burger.open span:first-child { transform: translateY(6px) rotate(45deg); }
   .burger.open span:nth-child(2) { opacity: 0; }
   .burger.open span:last-child { transform: translateY(-6px) rotate(-45deg); }
