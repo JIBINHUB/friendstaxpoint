@@ -1181,3 +1181,49 @@ picture { display: contents; }
 
 .kmap__credit { margin-top: 6px; font-size: 10.5px; color: #9bb0c9; text-align: center; }
 @media (max-width: 640px) { .kmap__credit { font-size: 10px; } }
+
+/* ---------- Footer credit: Leaf Creationism ---------- */
+.credit {
+  position: relative; overflow: hidden; isolation: isolate;
+  display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
+  margin: 22px auto 0; padding: 13px 26px; width: fit-content; max-width: 100%;
+  border-radius: 999px; text-align: center;
+  background: linear-gradient(120deg, rgba(63, 207, 142, .14), rgba(22, 120, 251, .16) 55%, rgba(63, 207, 142, .14));
+  border: 1px solid rgba(142, 240, 189, .34);
+  box-shadow: 0 10px 30px -14px rgba(63, 207, 142, .55);
+  transition: transform .35s var(--ease), box-shadow .35s, border-color .35s;
+}
+.credit:hover { transform: translateY(-2px); border-color: rgba(142, 240, 189, .7); box-shadow: 0 16px 36px -14px rgba(63, 207, 142, .8); }
+.credit__shine {
+  position: absolute; inset: 0 auto 0 -60px; width: 70px; z-index: -1; pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .3), transparent);
+  transform: skewX(-20deg); animation: streak 4.5s ease-in-out infinite;
+}
+.credit__label { font-size: 13px; color: #9fb3cc; letter-spacing: .2px; }
+.credit__brand {
+  display: inline-flex; align-items: center; gap: 7px; font-size: 15.5px; font-weight: 700; letter-spacing: .2px;
+  background: linear-gradient(95deg, #8ef0bd, #6bd7ff 55%, #8ef0bd);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.credit__leaf { width: 18px; height: 18px; stroke: none; flex-shrink: 0; animation: sway 3.6s ease-in-out infinite; transform-origin: 12px 21px; }
+.credit__go { font-style: normal; color: #8ef0bd; font-size: 15px; transition: transform .3s var(--ease); }
+.credit:hover .credit__go { transform: translateX(4px); }
+@media (max-width: 640px) {
+  .credit { gap: 7px; padding: 11px 18px; margin-top: 18px; }
+  .credit__label { font-size: 12px; }
+  .credit__brand { font-size: 14.5px; }
+}
+
+/* ---------- "Why choose" slides: larger on desktop ---------- */
+@media (min-width: 1025px) {
+  .pslide { gap: 56px; padding: 28px 48px; }
+  .pslide__media { height: 470px; }
+  .pslide__media::before { width: 78%; height: 70%; }
+  .pslide__media img { width: 74%; }
+  .mock { width: 248px; padding: 22px; bottom: 34px; border-radius: 18px; }
+  .mock__big { font-size: 40px; }
+  .mock > small { font-size: 13px; margin-bottom: 14px; }
+  .mock__row { font-size: 14px; padding: 10px 0; }
+  .pslide__text h3 { font-size: clamp(28px, 3vw, 38px); margin-bottom: 18px; }
+  .pslide__text p { font-size: 19px; }
+}
