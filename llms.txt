@@ -27,6 +27,14 @@
 - Rubber Board returns and agricultural subsidy management for rubber planters and farmers
 - Vehicle and health insurance
 
+## Service pages
+- Salaried Professionals: https://friendstaxpoint.com/services/itr-filing-salaried.html — Income tax return filing for salaried employees and pensioners in Kerala. Form 16, AIS and 26AS reconciled, old vs new regime compared, every deduction claimed.
+- Business & GST Filers: https://friendstaxpoint.com/services/gst-registration-returns.html — GST registration, GSTR-1, GSTR-3B and annual returns for businesses in Kerala. Input tax credit reconciled, e-way bills, e-invoicing and GST notice replies.
+- Farmers & Rubber Planters: https://friendstaxpoint.com/services/rubber-board-agriculture.html — Rubber Board return filing, subsidy documentation and agricultural income tax reporting for planters and farmers in Kerala. Serving Kollam, Pathanamthitta and Thiruvananthapuram.
+- Freelancers & Professionals: https://friendstaxpoint.com/services/freelancer-tax-filing.html — Income tax filing for freelancers, consultants, doctors and professionals in Kerala. Section 44ADA presumptive taxation, TDS refunds, advance tax and GST on services.
+- Companies & Startups: https://friendstaxpoint.com/services/company-llp-registration.html — Private limited, LLP and OPC registration in Kerala, plus ROC annual filings, bookkeeping, audit support, partnership deeds, licences and project reports.
+- Tax Notices & Planning: https://friendstaxpoint.com/services/tax-notice-reply.html — Expert replies to Income Tax and GST notices in Kerala — sections 139(9), 143(1), 143(2), 148, 245, ASMT-10 and DRC-01 — plus year-round tax planning.
+
 ## Branches (8)
 - Anchal — Kuruvikonam, Anchal, Kerala 691333 (Kollam district)
 - Ayoor — Malayil Building, Oyoor Road, Ayoor, Kerala 691533 (Kollam district)
