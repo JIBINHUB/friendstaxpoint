@@ -945,17 +945,22 @@ picture { display: contents; }
   .pcard__icon { top: 22px; right: 20px; width: 48px; height: 48px; }
   .pcard__icon svg { width: 26px; height: 26px; }
 }
-/* two-by-two on phones */
+/* two-by-two on phones: normal flow so the content fits the card */
 @media (max-width: 640px) {
-  .pastel-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .pcard { height: 176px; border-radius: 18px; }
-  .pcard__body { padding: 16px 14px 0; gap: 8px; }
-  .pcard__title { font-size: 15.5px; line-height: 20px; letter-spacing: -.1px; }
+  .pastel-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pcard {
+    height: auto; min-height: 170px; border-radius: 18px; padding: 15px 14px 16px;
+    display: flex; flex-direction: column; gap: 11px;
+  }
+  .pcard__icon { position: static; width: 38px; height: 38px; }
+  .pcard__icon svg { width: 22px; height: 22px; }
+  .pcard__body { position: static; inset: auto; padding: 0; gap: 6px; flex: 1; }
+  .pcard__title { font-size: 15px; line-height: 19px; letter-spacing: -.1px; }
   .pcard__desc { font-size: 11.5px; line-height: 1.45; }
-  .pcard__icon { position: static; width: 34px; height: 34px; margin: 14px 0 0 14px; }
-  .pcard__icon svg { width: 19px; height: 19px; }
-  .pcard__body { top: 48px; }
   .pcard__hover { display: none; }
+  .pcard:hover { transform: none; }
+  .pcard:hover .pcard__body { opacity: 1; }
+  .pcard:hover .pcard__icon { transform: none; }
 }
 
 /* ---------- Service detail pages ---------- */

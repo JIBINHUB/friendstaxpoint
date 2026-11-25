@@ -72,7 +72,7 @@ document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
     slides.forEach((x, k) => x.classList.toggle('active', k === i));
     [...dots.children].forEach((d, k) => d.classList.toggle('active', k === i));
   };
-  const restart = () => { clearInterval(timer); timer = setInterval(() => go(i + 1), 5000); };
+  const restart = () => { clearInterval(timer); timer = setInterval(() => go(i + 1), 4000); };
   root.addEventListener('mouseenter', () => clearInterval(timer));
   root.addEventListener('mouseleave', restart);
   // swipe
