@@ -217,13 +217,9 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 .ai-bars .b { transform-box: fill-box; transform-origin: bottom; animation: grow 2.8s var(--ease) infinite; }
 .ai-bars .b2 { animation-delay: .2s; } .ai-bars .b3 { animation-delay: .4s; }
 @keyframes grow { 0% { transform: scaleY(.2); } 40%, 80% { transform: scaleY(1); } 100% { transform: scaleY(.2); } }
-/* agriculture: leaf sways, latex drop swells */
-.ai-eco .sway { transform-origin: 14px 36px; animation: sway 3.4s ease-in-out infinite; }
-.ai-eco .latex { transform-box: fill-box; transform-origin: 50% 0; animation: swell 3s ease-in-out infinite; }
-@keyframes swell {
-  0%, 100% { transform: scale(.72); opacity: .8; }
-  45% { transform: scale(1); opacity: 1; }
-}
+/* agriculture: leaf mark breathes */
+.ai-leafmark .breathe { transform-box: fill-box; transform-origin: center; animation: breathe 4s ease-in-out infinite; }
+@keyframes breathe { 0%, 100% { transform: scale(.94); } 50% { transform: scale(1); } }
 /* leaf sway */
 .ai-leaf .sway { transform-origin: 24px 42px; animation: sway 3.2s ease-in-out infinite; }
 @keyframes sway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
@@ -1045,6 +1041,7 @@ picture { display: contents; }
 .svc-hero__note { margin-top: 18px; font-size: 13.5px; color: var(--grey); }
 .svc-hero__icon { width: 132px; height: 132px; border-radius: 50%; display: grid; place-items: center; background: var(--c-ic); flex-shrink: 0; }
 .svc-hero__icon svg { width: 68px; height: 68px; stroke: none; overflow: visible; }
+.svc-hero__icon .ai-leafmark { width: 92px; height: 92px; filter: drop-shadow(0 10px 14px rgba(59, 122, 30, .28)); }
 
 .svc-h2 { margin-bottom: 28px; }
 .svc-h2.centered { text-align: center; }
