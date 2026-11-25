@@ -1,6 +1,6 @@
 # Friends Tax Point
 
-> Friends Tax Point is a tax and business consultancy in Kerala, India, serving individuals, farmers, freelancers and businesses since 2001. It has 7 branches across Kollam, Thiruvananthapuram and Pathanamthitta districts.
+> Friends Tax Point is a tax and business consultancy in Kerala, India, serving individuals, farmers, freelancers and businesses since 2001. It has 8 branches across Kollam, Thiruvananthapuram and Pathanamthitta districts.
 
 ## Key facts
 - Name: Friends Tax Point
@@ -11,6 +11,7 @@
 - Phone: +91 70129 69190, +91 85479 73534
 - Email: lijunellickal@gmail.com
 - Website: https://friendstaxpoint.com/
+- Office hours: open until 5 PM
 - Clients served: 500+; client retention 98%; typical response time under 24 hours
 
 ## Services
@@ -26,14 +27,15 @@
 - Rubber Board returns and agricultural subsidy management for rubber planters and farmers
 - Vehicle and health insurance
 
-## Branches
-- Anchal — Kuruvikonam (Kollam district)
-- Venchempu — Pinacle Point (Kollam district)
-- Kilimanoor — Central Junction (Thiruvananthapuram district)
-- Ayoor — near KSRTC bus stand (Kollam district)
-- Pathanapuram — Puthuval (Kollam district)
-- Ranni — near KSRTC bus stand (Pathanamthitta district)
-- Enath — K.J. Building (Pathanamthitta district)
+## Branches (8)
+- Anchal — Kuruvikonam, Anchal, Kerala 691333 (Kollam district)
+- Ayoor — Malayil Building, Oyoor Road, Ayoor, Kerala 691533 (Kollam district)
+- Thingalkarikkom — Thingalkarikkom Junction, Kerala 691310 (Kollam district)
+- Kilimanoor — MR Complex, SH 1, Kilimanoor, Pazhayakunnummel, Kerala 695601 (Thiruvananthapuram district)
+- Pathanapuram — Puthuval, Pathanapuram, Enadimangalam, Kerala 689695 (Kollam district)
+- Venchempu — Pinacle Point, Venchempu, Kerala (Kollam district)
+- Enath — K.J. Building, Enath, Kerala (Pathanamthitta district)
+- Ranni — near KSRTC bus stand, Ranni, Kerala (Pathanamthitta district)
 
 ## Frequently asked questions
 - How long does ITR filing take? Most returns are filed within 24 hours of receiving complete documents.

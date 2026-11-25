@@ -158,8 +158,9 @@ document.getElementById('contactForm').addEventListener('submit', e => {
       swap.classList.remove('out');
     }, 250);
     loader.classList.add('on');
-    map.src = `https://maps.google.com/maps?q=${q}&z=15&output=embed`;
-    dir.href = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
+    const dest = (b.lat && b.lon) ? `${b.lat},${b.lon}` : q;
+    map.src = `https://maps.google.com/maps?q=${encodeURIComponent(dest)}&z=16&output=embed`;
+    dir.href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(dest)}`;
     if (fromTab && innerWidth < 1024) document.getElementById('branchCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
   pins.forEach(p => {
