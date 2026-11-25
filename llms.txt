@@ -1,12 +1,14 @@
 # Friends Tax Point
 
-> Friends Tax Point is a tax and business consultancy in Kerala, India, serving individuals, farmers, freelancers and businesses since 2001. It has 8 branches across Kollam, Thiruvananthapuram and Pathanamthitta districts.
+> Friends Tax Point is a tax and business consultancy serving all 14 districts of Kerala, India, for individuals, farmers, freelancers and businesses since 2001. It has 8 branch offices in Kollam, Thiruvananthapuram and Pathanamthitta, and files remotely for clients anywhere in Kerala by phone, WhatsApp or email.
 
 ## Key facts
 - Name: Friends Tax Point
 - Type: Tax & business consultants (accounting service)
 - Founded: 2001
-- Region served: Kerala, India (Kollam, Thiruvananthapuram, Pathanamthitta)
+- Region served: all of Kerala, India — Thiruvananthapuram, Kollam, Pathanamthitta, Alappuzha, Kottayam, Idukki, Ernakulam, Thrissur, Palakkad, Malappuram, Kozhikode, Wayanad, Kannur and Kasaragod districts
+- Branch offices: 8, in Kollam, Thiruvananthapuram and Pathanamthitta districts
+- Remote service: documents can be sent by phone, WhatsApp or email from anywhere in Kerala, so clients outside those three districts are served too
 - Senior Tax Consultant: Liju Nellickal
 - Phone: +91 70129 69190, +91 85479 73534
 - Email: lijunellickal@gmail.com
@@ -50,6 +52,7 @@
 - Can I file without visiting? Yes — documents can be shared by phone or email.
 - Is agricultural income taxable? Generally exempt in India, but it must be reported correctly in the return; Friends Tax Point helps planters do this and claim subsidies.
 - Do you help with tax notices? Yes, for both Income Tax and GST notices.
+- Do you serve clients outside your branch districts? Yes. Filing is done remotely for clients anywhere in Kerala, including Ernakulam, Thrissur, Kozhikode, Kannur, Kottayam, Alappuzha, Idukki, Palakkad, Malappuram, Wayanad and Kasaragod.
 
 ## Contact
 Call +91 70129 69190 or email lijunellickal@gmail.com. Visit https://friendstaxpoint.com/#branches for maps and directions to each branch.
