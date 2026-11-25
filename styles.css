@@ -204,10 +204,10 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 .ai-lock .shackle { animation: unlock 3.5s var(--ease) infinite; }
 @keyframes unlock { 0%, 20%, 60%, 100% { transform: translateY(0); } 35%, 50% { transform: translateY(-3px); } }
 /* briefcase handle lift */
-.ai-bag .handle { stroke: var(--navy); stroke-width: 2.6; animation: lift 2.6s var(--ease) infinite; }
+.ai-bag .handle { fill: none; stroke: #1668d8; stroke-width: 2.6; stroke-linecap: round; animation: lift 2.6s var(--ease) infinite; }
 @keyframes lift { 50% { transform: translateY(-2.5px); } }
 /* bars grow */
-.ai-bars path { stroke: #9fd5b9; }
+.ai-bars .trend { fill: none; stroke-dasharray: 34; stroke-dashoffset: 34; animation: draw 4s var(--ease) infinite; }
 .ai-bars .b { transform-box: fill-box; transform-origin: bottom; animation: grow 2.8s var(--ease) infinite; }
 .ai-bars .b2 { animation-delay: .2s; } .ai-bars .b3 { animation-delay: .4s; }
 @keyframes grow { 0% { transform: scaleY(.2); } 40%, 80% { transform: scaleY(1); } 100% { transform: scaleY(.2); } }
@@ -219,13 +219,14 @@ svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width:
 .ai-laptop .type { stroke-dasharray: 14; stroke-dashoffset: 14; animation: write 2.6s steps(7) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 /* building windows light up */
-.ai-building .win rect { fill: #c7b8ff; stroke: none; animation: lightup 3s infinite; }
+.ai-building .win rect { fill: #fff; stroke: none; opacity: .42; animation: lightup 3s infinite; }
 .ai-building .win rect:nth-child(2) { animation-delay: .3s; } .ai-building .win rect:nth-child(3) { animation-delay: .6s; }
 .ai-building .win rect:nth-child(4) { animation-delay: .9s; } .ai-building .win rect:nth-child(5) { animation-delay: 1.2s; } .ai-building .win rect:nth-child(6) { animation-delay: 1.5s; }
-@keyframes lightup { 0%, 100% { fill: #c7b8ff; } 30% { fill: #6b4ce6; } }
+@keyframes lightup { 0%, 100% { opacity: .42; } 30% { opacity: 1; } }
 /* bell ring + ping */
 .ai-bell .ring-bell { transform-origin: 24px 10px; animation: ringbell 2.8s ease-in-out infinite; }
 .ai-bell .ping { transform-box: fill-box; transform-origin: center; animation: pingdot 2.8s ease-out infinite; }
+.ai-bell .ring-bell path:last-child { fill: none; }
 @keyframes ringbell { 0%, 50%, 100% { transform: rotate(0); } 5%, 15%, 25% { transform: rotate(12deg); } 10%, 20%, 30% { transform: rotate(-12deg); } }
 @keyframes pingdot { 0% { transform: scale(1); } 40% { transform: scale(1.4); } 60%, 100% { transform: scale(1); } }
 /* contact icons */
@@ -916,7 +917,7 @@ picture { display: contents; }
   position: absolute; top: 34px; right: 32px; width: 60px; height: 60px; border-radius: 50%;
   display: grid; place-items: center; background: var(--c-ic); transition: opacity .25s, transform .45s var(--ease);
 }
-.pcard__icon svg { width: 32px; height: 32px; }
+.pcard__icon svg { width: 32px; height: 32px; stroke: none; overflow: visible; }
 .pcard:hover .pcard__icon { transform: scale(1.08) rotate(-6deg); }
 
 .pcard__hover {
